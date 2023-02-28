@@ -1,42 +1,48 @@
 <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
-  <div class="form-group">
-   <div class="form-input">
-   <input
-   type="text"
-   formControlName="firstName"
-   class="form-control"
-   [class.is-invalid]="
-     signupControls['firstName'].touched &&
-     signupControls['firstName'].invalid
-   "
-   placeholder="John"
- />
-</div>
-    <div class="form-input">
-    <input
-      type="text"
-      formControlName="lastName"
-      class="form-control"
-      [class.is-invalid]="
-        signupControls['lastName'].touched && signupControls['lastName'].invalid
-      "
-      placeholder="Doe"
-    />
+    <div class="form-group">
+        <div class="form-input">
+            <input
+                type="text"
+                formControlName="firstName"
+                class="form-control"
+                [class.is-invalid]="
+                    signupControls['firstName'].touched &&
+                    signupControls['firstName'].invalid
+                "
+                placeholder="John"
+            />
+        </div>
+        <div class="form-input">
+            <input
+                type="text"
+                formControlName="lastName"
+                class="form-control"
+                [class.is-invalid]="
+                    signupControls['lastName'].touched &&
+                    signupControls['lastName'].invalid
+                "
+                placeholder="Doe"
+            />
+        </div>
+        <div class="form-input">
+            <input
+                type="text"
+                formControlName="email"
+                class="form-control"
+                [class.is-invalid]="
+                    signupControls['email'].touched &&
+                    signupControls['email'].invalid
+                "
+                placeholder="john.doe@outlook.com"
+            />
+        </div>
     </div>
-    <div class="form-input">
-    <input
-      type="text"
-      formControlName="email"
-      class="form-control"
-      [class.is-invalid]="
-        signupControls['email'].touched && signupControls['email'].invalid
-      "
-      placeholder="john.doe@outlook.com"
-    />
-    </div>
-  </div>
 
-  <button class="btn btn-primary" type="submit" [disabled]="!signupForm.valid">
-    Sign up
+    <button
+        class="btn btn-primary"
+        type="submit"
+        [disabled]="!signupForm.valid"
+    >
+        Sign up
     </button>
 </form>
