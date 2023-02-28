@@ -4,10 +4,18 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SampleReactiveFormsComponent } from './components/sample-reactive-forms/sample-reactive-forms.component';
+import { DynamicFormsComponent } from './components/dynamic-forms/dynamic-forms.component';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-    declarations: [AppComponent, SampleReactiveFormsComponent],
-    imports: [BrowserModule, ReactiveFormsModule],
+    declarations: [
+        AppComponent,
+        SampleReactiveFormsComponent,
+        DynamicFormsComponent,
+        FileUploadComponent,
+    ],
+    imports: [BrowserModule, ReactiveFormsModule, HttpClientModule],
     providers: [],
     bootstrap: [AppComponent],
 })

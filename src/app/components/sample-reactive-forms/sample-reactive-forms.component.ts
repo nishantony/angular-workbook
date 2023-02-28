@@ -18,7 +18,10 @@ export class SampleReactiveFormsComponent {
 
     ngOnInit() {
         this.signupForm = new FormGroup({
-            firstName: new FormControl('', [Validators.required]),
+            firstName: new FormControl('', [
+                Validators.required,
+                Validators.minLength(2),
+            ]),
             lastName: new FormControl('', [Validators.required]),
             email: new FormControl('', [Validators.required, Validators.email]),
         });
@@ -36,4 +39,10 @@ export class SampleReactiveFormsComponent {
         };
         console.log(data);
     }
+
+    /*
+
+    // ref https://arminzia.com/blog/password-validation-with-angular-reactive-forms/ for custom password validator
+    https://blog.angular-university.io/angular-file-upload/
+    */
 }
