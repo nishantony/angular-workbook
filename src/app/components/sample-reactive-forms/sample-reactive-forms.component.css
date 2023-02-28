@@ -1,3 +1,13 @@
 .is-invalid {
-    border-color: red;
+    border-color: red !important;
+}
+
+.form-input {
+    margin-bottom: 10px;
+}
+
+.form-input input {
+    border: 2px #d1d1d1 solid;
+    border-radius: 5px;
+    outline: none;
 }
